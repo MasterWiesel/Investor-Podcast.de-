@@ -90,7 +90,7 @@ export const episodes: Episode[] = [
     id: 'amazon-microsoft-analyse',
     title: 'Folge 2: Amazon vs. Microsoft - Aktienanalyse',
     description: 'Trotz des Erfolgs am Allzeithoch ist Amazon nicht überbewertet. Bei Microsoft hingegen ist die Bewertung fraglich. Lohnt sich jetzt der Einstieg bei Amazon? Droht Microsoft der Absturz? Die Antworten gibt es in dieser Folge!',
-    imageUrl: 'https://perfectio-die-finanzmakler.de/public/images/podcast-covers/Investor%20Podcast%20Cover%20Folge%202.png',
+    imageUrl: 'https://perfectio-die-finanzmakler.de/public/images/podcast-covers/folge-2.png',
     audioUrl: 'https://perfectio-die-finanzmakler.de/public/audio/Aktienanalyse-Microsoft%20u%20Amazon.mp3',
     publishDate: '2024-11-06',
     summary: `
@@ -143,7 +143,7 @@ export const episodes: Episode[] = [
     id: 'us-sanktionen-china',
     title: 'Folge 3: US-Sanktionen gegen China gescheitert? - Wirtschaft',
     description: 'In dieser Podcastfolge analysieren wir die Auswirkungen des Handelskrieges zwischen den USA und China, insbesondere im Hinblick auf die Chipindustrie.',
-    imageUrl: 'https://perfectio-die-finanzmakler.de/public/images/podcast-covers/Investor%20Podcast%20Cover%20Folge%203.png',
+    imageUrl: 'https://perfectio-die-finanzmakler.de/public/images/podcast-covers/folge-3.png',
     audioUrl: 'https://perfectio-die-finanzmakler.de/public/audio/Wirtschaft-Handelskrieg-USA-gegen-China.mp3',
     publishDate: '2024-11-08',
     summary: `

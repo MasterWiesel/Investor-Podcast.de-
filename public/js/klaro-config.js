@@ -19,7 +19,7 @@ window.klaroConfig = {
     hideLearnMore: false,
     translations: {
         de: {
-            privacyPolicyUrl: '/datenschutz',
+            privacyPolicyUrl: 'https://perfectio-die-finanzmakler.de/datenschutz',
             consentModal: {
                 title: 'Informationen die wir sammeln',
                 description: 'Hier können Sie einsehen und anpassen, welche Information wir über Sie sammeln.\n',

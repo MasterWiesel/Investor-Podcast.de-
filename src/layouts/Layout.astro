@@ -27,6 +27,9 @@ const { title } = Astro.props;
         border-radius: 4px !important;
         padding: 8px 16px !important;
         font-weight: 500 !important;
+        display: inline-block !important;
+        text-align: center !important;
+        min-width: 120px !important;
       }
 
       .klaro .cookie-modal .cm-btn:hover,
@@ -47,6 +50,30 @@ const { title } = Astro.props;
         background-color: #4a0014 !important;
       }
 
+      .klaro .cookie-modal .cm-btn.cm-btn-decline,
+      .klaro .context-notice .cm-btn.cm-btn-decline,
+      .klaro .cookie-notice .cm-btn.cm-btn-decline {
+        background-color: #666666 !important;
+      }
+
+      .klaro .cookie-modal .cm-btn.cm-btn-decline:hover,
+      .klaro .context-notice .cm-btn.cm-btn-decline:hover,
+      .klaro .cookie-notice .cm-btn.cm-btn-decline:hover {
+        background-color: #555555 !important;
+      }
+
+      .klaro .cookie-modal .cm-btn.cm-btn-info,
+      .klaro .context-notice .cm-btn.cm-btn-info,
+      .klaro .cookie-notice .cm-btn.cm-btn-info {
+        background-color: #333333 !important;
+      }
+
+      .klaro .cookie-modal .cm-btn.cm-btn-info:hover,
+      .klaro .context-notice .cm-btn.cm-btn-info:hover,
+      .klaro .cookie-notice .cm-btn.cm-btn-info:hover {
+        background-color: #222222 !important;
+      }
+
       .klaro .cookie-modal a,
       .klaro .context-notice a,
       .klaro .cookie-notice a {
@@ -65,16 +92,28 @@ const { title } = Astro.props;
       .klaro .context-notice .cm-footer-buttons,
       .klaro .cookie-notice .cm-footer-buttons {
         gap: 8px !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        margin-top: 1rem !important;
       }
 
       .klaro .cookie-notice:not(.cookie-modal-notice) {
         background-color: #ffffff !important;
         color: #333333 !important;
         border: 1px solid #e5e7eb !important;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
       }
 
       .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p {
         color: #333333 !important;
+      }
+
+      .klaro .cookie-notice .cn-ok {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
       }
     </style>
     <script is:inline src="https://cdn.kiprotect.com/klaro/v0.7/klaro.js" defer></script>

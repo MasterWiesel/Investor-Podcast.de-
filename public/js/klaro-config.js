@@ -5,7 +5,7 @@ window.klaroConfig = {
     styling: {
         theme: ['light', 'top', 'wide'],
     },
-    noAutoLoad: false,
+    noAutoLoad: true,
     htmlTexts: true,
     embedded: false,
     groupByPurpose: true,

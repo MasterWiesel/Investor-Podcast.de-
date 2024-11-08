@@ -56,15 +56,15 @@ window.klaroConfig = {
                 [/^_gid.*$/i, '/', '.perfectio-die-finanzmakler.de'],
             ],
             callback: function(consent, service) {
-                // Get the analytics script element
-                const analyticsScript = document.querySelector('script[data-name="google-analytics"]');
-                
-                if (consent && analyticsScript) {
-                    // Execute the analytics script content
-                    const scriptContent = analyticsScript.textContent;
-                    if (scriptContent) {
-                        const executeScript = new Function(scriptContent);
-                        executeScript();
+                if (consent) {
+                    // Execute analytics script if consent is given
+                    const analyticsScript = document.querySelector('script[data-name="google-analytics"]');
+                    if (analyticsScript) {
+                        const scriptContent = analyticsScript.textContent;
+                        if (scriptContent) {
+                            const executeScript = new Function(scriptContent);
+                            executeScript();
+                        }
                     }
                 } else {
                     // Remove analytics cookies if consent is withdrawn
@@ -77,10 +77,3 @@ window.klaroConfig = {
         }
     ]
 };
-
-// Initialize Klaro when the page loads
-window.addEventListener('load', function() {
-    if (window.klaro) {
-        window.klaro.show(window.klaroConfig);
-    }
-});

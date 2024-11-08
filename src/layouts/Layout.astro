@@ -17,8 +17,67 @@ const { title } = Astro.props;
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Klaro Cookie Consent -->
-    <link rel="stylesheet" href="/css/klaro.min.css" />
-    <script is:inline src="/js/klaro.js" defer></script>
+    <style is:inline>
+      /* Klaro styles for better accessibility */
+      .klaro .cookie-modal .cm-btn,
+      .klaro .context-notice .cm-btn,
+      .klaro .cookie-notice .cm-btn {
+        color: #ffffff !important;
+        background-color: #5f0019 !important;
+        border-radius: 4px !important;
+        padding: 8px 16px !important;
+        font-weight: 500 !important;
+      }
+
+      .klaro .cookie-modal .cm-btn:hover,
+      .klaro .context-notice .cm-btn:hover,
+      .klaro .cookie-notice .cm-btn:hover {
+        background-color: #4a0014 !important;
+      }
+
+      .klaro .cookie-modal .cm-btn.cm-btn-success,
+      .klaro .context-notice .cm-btn.cm-btn-success,
+      .klaro .cookie-notice .cm-btn.cm-btn-success {
+        background-color: #5f0019 !important;
+      }
+
+      .klaro .cookie-modal .cm-btn.cm-btn-success:hover,
+      .klaro .context-notice .cm-btn.cm-btn-success:hover,
+      .klaro .cookie-notice .cm-btn.cm-btn-success:hover {
+        background-color: #4a0014 !important;
+      }
+
+      .klaro .cookie-modal a,
+      .klaro .context-notice a,
+      .klaro .cookie-notice a {
+        color: #5f0019 !important;
+        text-decoration: underline !important;
+        font-weight: 500 !important;
+      }
+
+      .klaro .cookie-modal a:hover,
+      .klaro .context-notice a:hover,
+      .klaro .cookie-notice a:hover {
+        color: #4a0014 !important;
+      }
+
+      .klaro .cookie-modal .cm-footer-buttons,
+      .klaro .context-notice .cm-footer-buttons,
+      .klaro .cookie-notice .cm-footer-buttons {
+        gap: 8px !important;
+      }
+
+      .klaro .cookie-notice:not(.cookie-modal-notice) {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border: 1px solid #e5e7eb !important;
+      }
+
+      .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p {
+        color: #333333 !important;
+      }
+    </style>
+    <script is:inline src="https://cdn.kiprotect.com/klaro/v0.7/klaro.js" defer></script>
     <script is:inline src="/js/klaro-config.js" defer></script>
 
     <!-- Analytics Script Template (loaded by Klaro after consent) -->
@@ -35,6 +94,7 @@ const { title } = Astro.props;
         gtag('config', 'G-H3SRNSWEL1');
       })();
     </script>
+    <title>{title}</title>
   </head>
   <body class="bg-cream-100 text-gray-800">
     <slot />

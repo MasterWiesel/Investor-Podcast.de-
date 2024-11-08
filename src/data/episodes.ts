@@ -90,7 +90,7 @@ export const episodes: Episode[] = [
     title: 'Folge 2: Amazon vs. Microsoft - Aktienanalyse',
     description: 'Trotz des Erfolgs am Allzeithoch ist Amazon nicht überbewertet. Bei Microsoft hingegen ist die Bewertung fraglich. Lohnt sich jetzt der Einstieg bei Amazon? Droht Microsoft der Absturz? Die Antworten gibt es in dieser Folge!',
     imageUrl: 'https://perfectio-die-finanzmakler.de/public/images/podcast-covers/folge-2.png',
-    audioUrl: 'https://perfectio-die-finanzmakler.de/public/audio/Aktienanalyse-Microsoft-u-Amazon.mp3',
+    audioUrl: 'https://perfectio-die-finanzmakler.de/public/audio/Aktienanalyse-Microsoft%20u%20Amazon.mp3',
     publishDate: '2024-11-06',
     summary: `
       <ul class="list-disc pl-5 space-y-2">

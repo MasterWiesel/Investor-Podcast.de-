@@ -19,40 +19,38 @@ export const episodes: Episode[] = [
     publishDate: '2024-11-11',
     summary: `
       <ul class="list-disc pl-5 space-y-2">
-        <li>Analyse der politischen Situation und deren Einfluss auf die Börse</li>
-        <li>Mögliche Szenarien für die weitere Entwicklung des DAX</li>
-        <li>Auswirkungen auf den Euro und internationale Währungsbeziehungen</li>
-        <li>Chancen und Risiken für verschiedene Branchen</li>
-        <li>Handlungsempfehlungen für private Anleger in unsicheren Zeiten</li>
+        <li>Die Ampel-Koalition ist nach monatelangen Streitigkeiten und Uneinigkeiten, insbesondere über den Haushalt 2025, zerbrochen.</li>
+        <li>Der FDP-Vorsitzende Christian Lindner wurde von Bundeskanzler Olaf Scholz als Finanzminister entlassen. Lindner wirft Scholz vor, den Bruch der Koalition kalkuliert herbeigeführt zu haben.</li>
+        <li>Der Bundesverkehrsminister Volker Wissing bleibt als parteiloser Minister im Amt. Alle anderen FDP-Minister sind zurückgetreten.</li>
+        <li>Es werden Neuwahlen erwartet, der genaue Zeitpunkt ist noch unklar. Scholz will im Januar die Vertrauensfrage stellen, die Opposition drängt auf einen schnelleren Ablauf.</li>
+        <li>Die Folgen des Zerbrechens der Ampel sind weitreichend, insbesondere in Anbetracht der Wahl Donald Trumps zum US-Präsidenten und der damit verbundenen Unsicherheiten in der Wirtschafts- und Sicherheitspolitik.</li>
       </ul>
     `,
     shownotes: `
       <div class="space-y-8">
         <section>
-          <h3 class="text-xl font-semibold mb-4">Politische Entwicklungen und Marktreaktionen</h3>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Die aktuelle Regierungskrise und ihre unmittelbaren Auswirkungen auf die Börse</li>
-            <li>Reaktionen internationaler Investoren auf die deutsche Innenpolitik</li>
-            <li>Vergleich mit ähnlichen historischen Situationen und deren Marktfolgen</li>
-          </ul>
+          <h3 class="text-xl font-semibold mb-4">I. Das Ende der Ampel-Koalition</h3>
+          <p>Nach monatelangen Streitigkeiten hat die Ampel-Koalition ihre Arbeit eingestellt. Die Uneinigkeit über den Haushalt 2025, insbesondere die von Lindner geforderte Einhaltung der Schuldenbremse, führte zum Bruch. Scholz entließ Lindner als Finanzminister und warf ihm mangelnde Kompromissbereitschaft und Egoismus vor. Lindner wiederum beschuldigt Scholz, den Bruch der Koalition bewusst herbeigeführt zu haben.</p>
         </section>
 
         <section>
-          <h3 class="text-xl font-semibold mb-4">Branchenanalyse</h3>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Besonders betroffene Sektoren und deren Entwicklungsperspektiven</li>
-            <li>Gewinner und Verlierer der aktuellen Situation</li>
-            <li>Langfristige Auswirkungen auf die deutsche Wirtschaft</li>
-          </ul>
+          <h3 class="text-xl font-semibold mb-4">II. Volker Wissings Verbleib als Verkehrsminister</h3>
+          <p>Während alle anderen FDP-Minister aus der Regierung ausgeschieden sind, verbleibt Volker Wissing als Verkehrsminister im Amt. Er tritt aus der FDP aus und wird somit als Parteiloser die Geschäfte weiterführen. Dieser Schritt wird von Experten als vorteilhaft für Scholz bewertet, da er den Eindruck erweckt, dass nicht die FDP als Partei das Problem war, sondern einzelne Personen.</p>
         </section>
 
         <section>
-          <h3 class="text-xl font-semibold mb-4">Handlungsempfehlungen</h3>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Strategien zur Portfolioanpassung in volatilen Zeiten</li>
-            <li>Diversifikationsmöglichkeiten zur Risikominimierung</li>
-            <li>Konkrete Anlagevorschläge für verschiedene Risikoklassen</li>
-          </ul>
+          <h3 class="text-xl font-semibold mb-4">III. Neuwahlen und politische Lähmung</h3>
+          <p>Infolge des Koalitionsbruchs werden Neuwahlen erwartet. Scholz plant, im Januar die Vertrauensfrage im Bundestag zu stellen. Die Opposition drängt hingegen auf einen schnelleren Ablauf und fordert Scholz auf, die Vertrauensfrage noch in dieser Woche zu stellen. Bis zur Bildung einer neuen Regierung wird Deutschland von einer geschäftsführenden Regierung geleitet, die in ihren Handlungsmöglichkeiten eingeschränkt ist. Diese politische Lähmung ist besonders kritisch in Anbetracht der Wahl Donald Trumps zum US-Präsidenten und der damit einhergehenden Unsicherheiten.</p>
+        </section>
+
+        <section>
+          <h3 class="text-xl font-semibold mb-4">IV. Die Rolle der FDP</h3>
+          <p>Die FDP befindet sich laut Umfragen derzeit unter der Fünf-Prozent-Hürde und würde den Einzug in den Bundestag verpassen. Der Austritt aus der Ampel-Koalition kann als Versuch gewertet werden, das Image der Partei zu verbessern und sich als verantwortungsbewusste Kraft zu präsentieren, die unbeliebte Entscheidungen nicht mitträgt. Es besteht jedoch auch die Gefahr, dass dieser Schritt von den Wählern als Desertion in einer schwierigen Zeit gewertet wird.</p>
+        </section>
+
+        <section>
+          <h3 class="text-xl font-semibold mb-4">V. Ausblick</h3>
+          <p>Die Folgen des Ampel-Bruchs und der Wahl Donald Trumps sind noch nicht absehbar. Deutschland steht vor großen Herausforderungen in der Wirtschafts- und Sicherheitspolitik. Die politische Landschaft ist instabil und es ist unklar, welche Koalitionen nach der Neuwahl möglich sein werden.</p>
         </section>
       </div>
     `

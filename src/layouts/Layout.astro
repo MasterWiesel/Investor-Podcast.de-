@@ -21,17 +21,19 @@ const { title } = Astro.props;
     <script is:inline src="/js/klaro.js"></script>
     <script is:inline src="/js/klaro-config.js"></script>
 
-    <!-- Google Analytics (wird nur nach Zustimmung geladen) -->
-    <script type="opt-in" data-type="application/javascript" data-name="google-analytics">
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-H3SRNSWEL1';
-      document.head.appendChild(script);
+    <!-- Analytics Script Template (loaded by Klaro after consent) -->
+    <script type="text/plain" data-type="application/javascript" data-name="google-analytics">
+      (function() {
+        var analyticsScript = document.createElement('script');
+        analyticsScript.async = true;
+        analyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-H3SRNSWEL1';
+        document.head.appendChild(analyticsScript);
 
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-H3SRNSWEL1');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-H3SRNSWEL1');
+      })();
     </script>
   </head>
   <body class="bg-cream-100 text-gray-800">

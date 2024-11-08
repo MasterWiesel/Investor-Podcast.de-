@@ -138,15 +138,22 @@ const { title } = Astro.props;
   <body class="bg-cream-100 text-gray-800">
     <slot />
     
-    <!-- Initialize Klaro immediately after DOM is ready -->
+    <!-- Initialize Klaro only if consent hasn't been given -->
     <script is:inline>
       document.addEventListener('DOMContentLoaded', function() {
-        // Wait a short moment to ensure Klaro is fully loaded
-        setTimeout(function() {
-          if (window.klaro && window.klaroConfig) {
-            window.klaro.show(window.klaroConfig);
-          }
-        }, 100);
+        // Check if we have stored consent
+        const consentCookie = document.cookie
+          .split('; ')
+          .find(row => row.startsWith('klaro='));
+
+        // Only show the consent banner if no consent cookie exists
+        if (!consentCookie) {
+          setTimeout(function() {
+            if (window.klaro && window.klaroConfig) {
+              window.klaro.show(window.klaroConfig);
+            }
+          }, 100);
+        }
       });
     </script>
   </body>

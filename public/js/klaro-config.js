@@ -26,10 +26,6 @@ window.klaroConfig = {
             },
             purposes: {
                 analytics: 'Besucher-Statistiken',
-                security: 'Sicherheit',
-                livechat: 'Live Chat',
-                advertising: 'Anzeigen',
-                styling: 'Styling',
             },
             ok: 'Alle akzeptieren',
             decline: 'Ablehnen',
@@ -56,22 +52,17 @@ window.klaroConfig = {
             required: false,
             default: false,
             cookies: [
-                [/^_ga.*$/i, '/', 'perfectio-die-finanzmakler.de'],
-                [/^_gid.*$/i, '/', 'perfectio-die-finanzmakler.de'],
+                [/^_ga.*$/i, '/', '.perfectio-die-finanzmakler.de'],
+                [/^_gid.*$/i, '/', '.perfectio-die-finanzmakler.de'],
             ],
             callback: function(consent, service) {
-                // Callback wird ausgeführt, wenn sich der Consent-Status ändert
                 if (consent) {
-                    // Analytics wurde akzeptiert
                     if (document.readyState === 'complete') {
-                        // Seite bereits geladen
                         executeAnalytics();
                     } else {
-                        // Warte auf Seitenladung
                         window.addEventListener('load', executeAnalytics);
                     }
                 } else {
-                    // Analytics wurde abgelehnt - Cookie löschen
                     deleteCookies(['_ga', '_gid', '_gat']);
                 }
             },
@@ -90,6 +81,13 @@ function executeAnalytics() {
 // Hilfsfunktion zum Löschen von Cookies
 function deleteCookies(cookieNames) {
     cookieNames.forEach(cookieName => {
-        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;`;
+        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.perfectio-die-finanzmakler.de`;
     });
 }
+
+// Klaro initialisieren
+window.addEventListener('load', function() {
+    if (window.klaro) {
+        window.klaro.show(window.klaroConfig);
+    }
+});

@@ -17,8 +17,9 @@ const { title } = Astro.props;
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Klaro Cookie Consent -->
-    <script defer src="/js/klaro-config.js"></script>
-    <script defer src="/js/klaro.js"></script>
+    <link rel="stylesheet" href="/css/klaro.min.css" />
+    <script is:inline src="/js/klaro.js"></script>
+    <script is:inline src="/js/klaro-config.js"></script>
 
     <!-- Google Analytics (wird nur nach Zustimmung geladen) -->
     <script type="opt-in" data-type="application/javascript" data-name="google-analytics">

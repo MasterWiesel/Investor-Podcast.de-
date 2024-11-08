@@ -56,36 +56,29 @@ window.klaroConfig = {
                 [/^_gid.*$/i, '/', '.perfectio-die-finanzmakler.de'],
             ],
             callback: function(consent, service) {
-                if (consent) {
-                    if (document.readyState === 'complete') {
-                        executeAnalytics();
-                    } else {
-                        window.addEventListener('load', executeAnalytics);
+                // Get the analytics script element
+                const analyticsScript = document.querySelector('script[data-name="google-analytics"]');
+                
+                if (consent && analyticsScript) {
+                    // Execute the analytics script content
+                    const scriptContent = analyticsScript.textContent;
+                    if (scriptContent) {
+                        const executeScript = new Function(scriptContent);
+                        executeScript();
                     }
                 } else {
-                    deleteCookies(['_ga', '_gid', '_gat']);
+                    // Remove analytics cookies if consent is withdrawn
+                    const cookieNames = ['_ga', '_gid', '_gat'];
+                    cookieNames.forEach(name => {
+                        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.perfectio-die-finanzmakler.de`;
+                    });
                 }
-            },
+            }
         }
-    ],
+    ]
 };
 
-// Hilfsfunktion zum Ausführen von Analytics
-function executeAnalytics() {
-    const scripts = document.querySelectorAll('script[data-name="google-analytics"]');
-    scripts.forEach(script => {
-        eval(script.innerHTML);
-    });
-}
-
-// Hilfsfunktion zum Löschen von Cookies
-function deleteCookies(cookieNames) {
-    cookieNames.forEach(cookieName => {
-        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.perfectio-die-finanzmakler.de`;
-    });
-}
-
-// Klaro initialisieren
+// Initialize Klaro when the page loads
 window.addEventListener('load', function() {
     if (window.klaro) {
         window.klaro.show(window.klaroConfig);

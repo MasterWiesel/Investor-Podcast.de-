@@ -5,9 +5,13 @@ import Footer from '../../components/Footer.astro';
 import PodcastCard from '../../components/PodcastCard.astro';
 import SearchBar from '../../components/SearchBar.astro';
 import { episodes } from '../../data/episodes';
+import { isPublished } from '../../utils/dateUtils';
+
+// Filter published episodes
+const publishedEpisodes = episodes.filter(episode => isPublished(episode.publishDate));
 
 // Group episodes by month and year
-const groupedEpisodes = episodes.reduce((acc, episode) => {
+const groupedEpisodes = publishedEpisodes.reduce((acc, episode) => {
   const date = new Date(episode.publishDate);
   const key = `${date.getFullYear()}-${date.getMonth()}`;
   if (!acc[key]) {

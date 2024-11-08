@@ -28,6 +28,7 @@ window.klaroConfig = {
                 analytics: 'Besucher-Statistiken',
             },
             ok: 'Alle akzeptieren',
+            save: 'Speichern',
             decline: 'Ablehnen',
             close: 'Schließen',
             service: {

@@ -36,15 +36,45 @@ const shareUrl = `${baseUrl}${currentPath}`;
               <AudioPlayer src={episode.audioUrl} title={episode.title} />
             )}
 
-            <div class="flex justify-center gap-8 mb-8">
-              <a href="#" class="hover:opacity-80 transition-opacity" title="Bei Spotify hören">
-                <img src="https://perfectio-die-finanzmakler.de/public/icons/spotify.webp" alt="Spotify" class="h-16 w-16">
+            <div class="flex justify-center items-center gap-8 mb-8">
+              <a 
+                href="#" 
+                class="platform-icon hover:opacity-80 transition-opacity" 
+                title="Bei Spotify hören"
+              >
+                <img 
+                  src="https://perfectio-die-finanzmakler.de/public/icons/spotify.webp" 
+                  alt="Spotify" 
+                  width="48"
+                  height="48"
+                  class="w-12 h-12 object-contain"
+                >
               </a>
-              <a href="#" class="hover:opacity-80 transition-opacity" title="Bei Apple Podcasts hören">
-                <img src="https://perfectio-die-finanzmakler.de/public/icons/apple-podcasts.webp" alt="Apple Podcasts" class="h-16 w-16">
+              <a 
+                href="#" 
+                class="platform-icon hover:opacity-80 transition-opacity" 
+                title="Bei Apple Podcasts hören"
+              >
+                <img 
+                  src="https://perfectio-die-finanzmakler.de/public/icons/apple-podcasts.png" 
+                  alt="Apple Podcasts" 
+                  width="48"
+                  height="48"
+                  class="w-12 h-12 object-contain"
+                >
               </a>
-              <a href="#" class="hover:opacity-80 transition-opacity" title="Bei Google Podcasts hören">
-                <img src="https://perfectio-die-finanzmakler.de/public/icons/google-podcasts.webp" alt="Google Podcasts" class="h-16 w-16">
+              <a 
+                href="#" 
+                class="platform-icon hover:opacity-80 transition-opacity" 
+                title="Bei Google Podcasts hören"
+              >
+                <img 
+                  src="https://perfectio-die-finanzmakler.de/public/icons/google-podcasts.png" 
+                  alt="Google Podcasts" 
+                  width="48"
+                  height="48"
+                  class="w-12 h-12 object-contain"
+                >
               </a>
             </div>
 
@@ -85,5 +115,21 @@ const shareUrl = `${baseUrl}${currentPath}`;
   aside {
     max-height: calc(100vh - 4rem);
     overflow-y: auto;
+  }
+
+  .platform-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: #f8f8f8;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .platform-icon img {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
   }
 </style>

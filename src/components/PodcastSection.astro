@@ -1,10 +1,11 @@
 ---
 import PodcastCard from './PodcastCard.astro';
 import { episodes } from '../data/episodes';
+import { isPublished } from '../utils/dateUtils';
 
-const sortedEpisodes = [...episodes].sort((a, b) => 
-  new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
-);
+const publishedEpisodes = episodes
+  .filter(episode => isPublished(episode.publishDate))
+  .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
 ---
 
 <section id="podcasts" class="bg-cream-50 py-16">
@@ -14,7 +15,7 @@ const sortedEpisodes = [...episodes].sort((a, b) =>
       <a href="/podcast-folgen" class="text-[#5f0019] hover:underline">Alle Folgen ansehen →</a>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {sortedEpisodes.map(episode => (
+      {publishedEpisodes.map(episode => (
         <PodcastCard 
           {...episode}
           showLink={true}

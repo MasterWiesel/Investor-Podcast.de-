@@ -5,12 +5,15 @@ import Footer from '../../components/Footer.astro';
 import AudioPlayer from '../../components/AudioPlayer.astro';
 import ShareWidget from '../../components/ShareWidget.astro';
 import { episodes } from '../../data/episodes';
+import { isPublished } from '../../utils/dateUtils';
 
 export function getStaticPaths() {
-  return episodes.map(episode => ({
-    params: { id: episode.id },
-    props: { episode },
-  }));
+  return episodes
+    .filter(episode => isPublished(episode.publishDate))
+    .map(episode => ({
+      params: { id: episode.id },
+      props: { episode },
+    }));
 }
 
 const { episode } = Astro.props;
@@ -35,13 +38,13 @@ const shareUrl = `${baseUrl}${currentPath}`;
 
             <div class="flex justify-center gap-8 mb-8">
               <a href="#" class="hover:opacity-80 transition-opacity" title="Bei Spotify hören">
-                <img src="https://perfectio-die-finanzmakler.de/public/icons/spotify.webp" alt="Spotify" class="h-8 w-8">
+                <img src="https://perfectio-die-finanzmakler.de/public/icons/spotify.webp" alt="Spotify" class="h-16 w-16">
               </a>
               <a href="#" class="hover:opacity-80 transition-opacity" title="Bei Apple Podcasts hören">
-                <img src="https://perfectio-die-finanzmakler.de/public/icons/apple-podcasts.webp" alt="Apple Podcasts" class="h-8 w-8">
+                <img src="https://perfectio-die-finanzmakler.de/public/icons/apple-podcasts.webp" alt="Apple Podcasts" class="h-16 w-16">
               </a>
               <a href="#" class="hover:opacity-80 transition-opacity" title="Bei Google Podcasts hören">
-                <img src="https://perfectio-die-finanzmakler.de/public/icons/google-podcasts.webp" alt="Google Podcasts" class="h-8 w-8">
+                <img src="https://perfectio-die-finanzmakler.de/public/icons/google-podcasts.webp" alt="Google Podcasts" class="h-16 w-16">
               </a>
             </div>
 
